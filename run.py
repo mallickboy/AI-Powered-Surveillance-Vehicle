@@ -26,35 +26,31 @@ class VideoCaptureAndDetectThread(QThread):
 
     def run(self):
         while self.running:
-            ret, frame = self.cap.read()
-            if not ret:
-                print("Error: Failed to grab frame.")
-                break
+            try:
+                ret, frame = self.cap.read()
+                if self.machine_learning:
+                    results = self.model(frame)
+                    for info in results:
+                        parameters = info.boxes
+                        for box in parameters:
+                            x1, y1, x2, y2 = box.xyxy[0].numpy().astype("int")
+                            confidence = int(box.conf[0].numpy() * 100)
+                            index_class = int(box.cls[0])
+                            name_class = results[0].names[index_class]
 
-            if self.machine_learning:
-                results = self.model(frame)
-                for info in results:
-                    parameters = info.boxes
-                    for box in parameters:
-                        x1, y1, x2, y2 = box.xyxy[0].numpy().astype("int")
-                        confidence = int(box.conf[0].numpy() * 100)
-                        index_class = int(box.cls[0])
-                        name_class = results[0].names[index_class]
-
-                        # Draw bounding box and label
-                        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 3)
-                        cv2.putText(
-                            frame,
-                            f"{name_class} : {confidence / 100}",
-                            (x1 + 8, y1 - 12),
-                            self.font,
-                            0.5,
-                            (255, 255, 255),
-                            2,
-                        )
-
-            # emit processed frame
-            self.frameProcessed.emit(frame)
+                            # Draw bounding box and label
+                            cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2) # BGR
+                            cv2.putText(
+                                frame,
+                                f"{name_class} : {confidence / 100}",
+                                (x1 + 8, y1 - 12),
+                                self.font,
+                                0.5,
+                                (255, 255, 255),
+                                2,
+                            )
+                self.frameProcessed.emit(frame)  # emit processed frame
+            except:0
 
     def stop(self):
         self.running = False

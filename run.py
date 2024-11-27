@@ -6,29 +6,55 @@ from PyQt5 import uic
 from PyQt5.QtGui import QImage, QPixmap
 from PyQt5.QtCore import QTimer, QThread, pyqtSignal
 from PyQt5.QtCore import Qt
+from ultralytics import YOLO
 
 # Define a VideoCapture thread class
-class VideoCaptureThread(QThread):
-    frameCaptured = pyqtSignal(np.ndarray)  # Signal to emit frames
+class VideoCaptureAndDetectThread(QThread):
+    frameProcessed = pyqtSignal(np.ndarray)  # Signal to emit processed frames
 
-    def __init__(self, url):
+    def __init__(self, url, model_path):
         super().__init__()
+        self.url = url
         self.cap = cv2.VideoCapture(url)
         self.running = True
+        self.model = YOLO(model_path)  # Load YOLO model
+        self.font = cv2.FONT_HERSHEY_SIMPLEX
+        self.machine_learning= False
+
         if not self.cap.isOpened():
-            print("Error: Could not open the video stream.")
-            sys.exit()
+            raise Exception("Error: Could not open the video stream.")
 
     def run(self):
         while self.running:
-            try:
-                ret, frame = self.cap.read()
-                if ret:
-                    self.frameCaptured.emit(frame)  # Emit captured frame
-                else:
-                    print("Error: Failed to grab frame.")
-                    break
-            except:0
+            ret, frame = self.cap.read()
+            if not ret:
+                print("Error: Failed to grab frame.")
+                break
+
+            if self.machine_learning:
+                results = self.model(frame)
+                for info in results:
+                    parameters = info.boxes
+                    for box in parameters:
+                        x1, y1, x2, y2 = box.xyxy[0].numpy().astype("int")
+                        confidence = int(box.conf[0].numpy() * 100)
+                        index_class = int(box.cls[0])
+                        name_class = results[0].names[index_class]
+
+                        # Draw bounding box and label
+                        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 3)
+                        cv2.putText(
+                            frame,
+                            f"{name_class} : {confidence / 100}",
+                            (x1 + 8, y1 - 12),
+                            self.font,
+                            0.5,
+                            (255, 255, 255),
+                            2,
+                        )
+
+            # emit processed frame
+            self.frameProcessed.emit(frame)
 
     def stop(self):
         self.running = False
@@ -43,10 +69,11 @@ class MyGui(QMainWindow): # FaceDetection
         self.setWindowTitle("Unmanned Ground Vehicle (UGV)")
         self.start, self.ESP_IP, self.servo_angle= False, None, int(self.ServoAngle.currentText())
         self.StartOperation.pressed.connect(self.take_ip_stream)  # Taking ip 
-        self.left_stop, self.right_stop, self.flash=True, True, False
+        self.left_stop, self.right_stop, self.flash, self.machine_learning=True, True, False, False
         self.left_speed, self.right_speed= int(self.LeftSpeed.currentText()), int(self.RightSpeed.currentText())
-        # flash light
+        # flash light and ml object detection
         self.FlashLight.pressed.connect(self.flash_light)
+        self.ObjectDetection.pressed.connect(self.object_detection)
         # Servo motors
         self.ServoAngle.currentIndexChanged.connect(self.update_servo_angle)
         self.ServoUp.pressed.connect(self.move_servo_up)
@@ -72,35 +99,75 @@ class MyGui(QMainWindow): # FaceDetection
         self.key_actions = {}
         self.show()
 
-    def take_ip_stream(self):  # Set up the video capture thread
-        self.ESP_IP= self.IPAddress.text().strip().replace(" ", "").replace("\t", "")
-        if self.ESP_IP :
+    def take_ip_stream(self):  # Set up the video capture and detection thread
+        self.ESP_IP = self.IPAddress.text().strip().replace(" ", "").replace("\t", "")
+        if self.ESP_IP:
             try:
                 self.textEdit.append(f"Taken IP Address : {self.ESP_IP}")
-                self.video_thread = VideoCaptureThread(f'http://{self.ESP_IP}:81/stream')
-                self.video_thread.frameCaptured.connect(self.update_frame)
-                
+                model_path = "./yolo/yolov10n.pt"  # Replace with your YOLO model path
+                self.video_thread = VideoCaptureAndDetectThread(f'http://{self.ESP_IP}:81/stream', model_path)
+                self.video_thread.frameProcessed.connect(self.update_frame)
+
                 self.video_thread.start()
                 self.start = True
+
                 if self.groupBox_Video.layout() is None:
                     self.groupBox_Video.setLayout(QVBoxLayout())  # Create a layout if not set
+
                 self.video_label = QLabel(self)
                 self.groupBox_Video.layout().addWidget(self.video_label)
                 self.video_label.setFixedSize(800, 600)
                 self.video_label.setContentsMargins(0, 0, 0, 0)  # Remove padding around QLabel
+
                 layout = self.groupBox_Video.layout()
                 layout.setContentsMargins(0, 0, 0, 0)  # Remove padding around the layout
                 layout.setSpacing(0)  # Remove any spacing between widgets
-            except:
-                try:self.video_thread.stop()
-                except:0
+
+            except Exception as e:
+                self.textEdit.append(f"Error: {e}")
+                try:
+                    self.video_thread.stop()
+                except Exception:
+                    pass
+
+
+    def update_frame(self, frame):
+        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        h, w, ch = rgb_frame.shape
+        bytes_per_line = ch * w
+        q_img = QImage(rgb_frame.data, w, h, bytes_per_line, QImage.Format_RGB888)
+        pixmap = QPixmap.fromImage(q_img)
+        pixmap = pixmap.scaled(800, 600, aspectRatioMode=1)  # Aspect ratio mode = KeepAspectRatio
+        self.video_label.setPixmap(pixmap)
+    def stop_stream(self):
+        if hasattr(self, "video_thread") and self.video_thread.isRunning():
+            self.video_thread.stop()
+            self.video_thread.wait()  # Wait for the thread to finish
+            self.textEdit.append("Video stream stopped.")
+
     def flash_light(self):
         if not self.flash:
             requests.get(f'http://{self.ESP_IP}/flash_light?control={1}&value={int(self.FlashIntensity.currentText())}')
             self.flash= True
+            self.textEdit.append("Starting Flash Light")
+            self.FlashLight.setStyleSheet("background-color: rgba(63, 195, 128,0.8);")
         else:
             requests.get(f'http://{self.ESP_IP}/flash_light?control={0}&value={0}')
+            self.textEdit.append("Stopping Flash Light")
+            self.FlashLight.setStyleSheet("background-color: white;")
             self.flash= False
+    def object_detection(self):
+        if self.machine_learning: # already ml: True
+            self.video_thread.machine_learning= False
+            self.machine_learning= False
+            self.textEdit.append("Stopping Object Detection")
+            self.ObjectDetection.setStyleSheet("background-color: white;")
+        else:
+            self.video_thread.machine_learning= True
+            self.machine_learning= True
+            self.textEdit.append("Starting Object Detection")
+            self.ObjectDetection.setStyleSheet("background-color: rgba(63, 195, 128,0.8);")
+
     def update_servo_angle(self):    
         self.servo_angle=int(self.ServoAngle.currentText())
         self.textEdit.append(f"Servo Motor rotation Changed to: {self.servo_angle} deg")
@@ -183,24 +250,6 @@ class MyGui(QMainWindow): # FaceDetection
         elif key == Qt.Key_D:
             return self.right_backward_stop
 
-
-    def update_frame(self, frame):
-        # Convert the frame to RGB (OpenCV uses BGR by default)
-        rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-        # Convert the frame to QImage
-        h, w, ch = rgb_frame.shape
-        bytes_per_line = ch * w
-        q_img = QImage(rgb_frame.data, w, h, bytes_per_line, QImage.Format_RGB888)
-
-        # Convert the QImage to QPixmap
-        pixmap = QPixmap.fromImage(q_img)
-
-        # Scale the pixmap to fit the fixed size of the QLabel (800x600)
-        pixmap = pixmap.scaled(800, 600, aspectRatioMode=1)  # Aspect ratio mode = KeepAspectRatio
-
-        # Display the QPixmap in the QLabel (inside groupBox_Video)
-        self.video_label.setPixmap(pixmap)
 
     def closeEvent(self, event):
         """Handle the window close event and release the video capture."""

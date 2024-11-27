@@ -78,7 +78,7 @@
     <bool>true</bool>
    </property>
    <property name="placeholderText">
-    <string>Hellow</string>
+    <string/>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox_Video">
@@ -355,33 +355,33 @@ border:3px solid black;
   <widget class="QPushButton" name="FlashLight">
    <property name="geometry">
     <rect>
-     <x>480</x>
+     <x>550</x>
      <y>620</y>
      <width>111</width>
      <height>29</height>
     </rect>
    </property>
    <property name="text">
-    <string>Start Flash Light</string>
+    <string>Flash Light</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="FaceDetection">
+  <widget class="QPushButton" name="ObjectDetection">
    <property name="geometry">
     <rect>
-     <x>600</x>
+     <x>670</x>
      <y>620</y>
-     <width>201</width>
+     <width>131</width>
      <height>29</height>
     </rect>
    </property>
    <property name="text">
-    <string>Start Face Detection</string>
+    <string>Object Detection</string>
    </property>
   </widget>
   <widget class="QComboBox" name="FlashIntensity">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>480</x>
      <y>620</y>
      <width>61</width>
      <height>26</height>

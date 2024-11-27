@@ -35,7 +35,7 @@ class VideoCaptureThread(QThread):
         self.cap.release()
 
 # Load the .ui file using uic
-class MyGui(QMainWindow):
+class MyGui(QMainWindow): # FaceDetection
     def __init__(self):
         super(MyGui, self).__init__()
         uic.loadUi("./esp32_app/form.ui", self)

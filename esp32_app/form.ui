@@ -365,7 +365,7 @@ border:3px solid black;
     <string>Start Flash Light</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="LeftBackward_3">
+  <widget class="QPushButton" name="FaceDetection">
    <property name="geometry">
     <rect>
      <x>600</x>

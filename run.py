@@ -103,6 +103,11 @@ class MyGui(QMainWindow): # FaceDetection
         self.ESP_IP = self.IPAddress.text().strip().replace(" ", "").replace("\t", "")
         if self.ESP_IP:
             try:
+                requests.get("http://192.168.0.102/control?var=lenc&val=1") #  Horizontal flip
+                requests.get("http://192.168.0.102/control?var=vflip&val=1") # Vertical flip
+                requests.get("http://192.168.0.102/control?var=framesize&val=9") # Default stream 800 * 600 px
+            except:0
+            try:
                 self.textEdit.append(f"Taken IP Address : {self.ESP_IP}")
                 model_path = "./yolo/yolov10n.pt"  # Replace with your YOLO model path
                 self.video_thread = VideoCaptureAndDetectThread(f'http://{self.ESP_IP}:81/stream', model_path)

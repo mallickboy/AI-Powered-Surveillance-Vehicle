@@ -39,20 +39,28 @@ class MyGui(QMainWindow):
     def __init__(self):
         super(MyGui, self).__init__()
         uic.loadUi("./esp32_app/form.ui", self)
-        self.setFixedSize(810, 800)  # Set fixed window size (800x600 for display)
+        self.setFixedSize(810, 830)  # Set fixed window size (800x600 for display)
         self.setWindowTitle("Unmanned Ground Vehicle (UGV)")
-        self.start, self.ESP_IP=False, None
+        self.start, self.ESP_IP, self.servo_angle= False, None, int(self.ServoAngle.currentText())
         self.StartOperation.pressed.connect(self.take_ip_stream)  # Taking ip 
-        self.left_stop, self.right_stop=True, True
+        self.left_stop, self.right_stop, self.flash=True, True, False
         self.left_speed, self.right_speed= int(self.LeftSpeed.currentText()), int(self.RightSpeed.currentText())
+        # flash light
+        self.FlashLight.pressed.connect(self.flash_light)
+        # Servo motors
+        self.ServoAngle.currentIndexChanged.connect(self.update_servo_angle)
+        self.ServoUp.pressed.connect(self.move_servo_up)
+        self.ServoDown.pressed.connect(self.move_servo_down)
+        self.ServoLeft.pressed.connect(self.move_servo_left)
+        self.ServoRight.pressed.connect(self.move_servo_right)
+        # Left wheels
         self.LeftSpeed.currentIndexChanged.connect(self.update_left_speed)
-        self.RightSpeed.currentIndexChanged.connect(self.update_right_speed)
-        # Left
         self.LeftForward.pressed.connect(self.left_forward_start)  # Button pressed event 
         self.LeftForward.released.connect(self.left_forward_stop)  # Button released event
         self.LeftBackward.pressed.connect(self.left_backward_start)  # Button pressed event
         self.LeftBackward.released.connect(self.left_backward_stop)  # Button released event
-        # Right
+        # Right wheels
+        self.RightSpeed.currentIndexChanged.connect(self.update_right_speed)
         self.RightForward.pressed.connect(self.right_forward_start)  # Button pressed event
         self.RightForward.released.connect(self.right_forward_stop)  # Button released event
         self.RightBackward.pressed.connect(self.right_backward_start)  # Button pressed event
@@ -64,7 +72,7 @@ class MyGui(QMainWindow):
         self.key_actions = {}
         self.show()
         # self.take_ip_stream()
-        
+    
     def take_ip_stream(self):  # Set up the video capture thread
         self.ESP_IP= self.IPAddress.text().strip().replace(" ", "").replace("\t", "")
         if self.ESP_IP :
@@ -87,6 +95,28 @@ class MyGui(QMainWindow):
             except:
                 try:self.video_thread.stop()
                 except:0
+    def flash_light(self):
+        if not self.flash:
+            requests.get(f'http://{self.ESP_IP}/flash_light?control={1}&value={int(self.FlashIntensity.currentText())}')
+            self.flash= True
+        else:
+            requests.get(f'http://{self.ESP_IP}/flash_light?control={0}&value={0}')
+            self.flash= False
+    def update_servo_angle(self):    
+        self.servo_angle=int(self.ServoAngle.currentText())
+        self.textEdit.append(f"Servo Motor rotation Changed to: {self.servo_angle} deg")
+    def move_servo_up(self):
+        requests.get(f'http://{self.ESP_IP}/servo_motors?control={2}&value={-self.servo_angle}')
+        self.textEdit.append(f"Vertical servo moved : {-self.servo_angle} degree")
+    def move_servo_down(self):
+        requests.get(f'http://{self.ESP_IP}/servo_motors?control={2}&value={self.servo_angle}')
+        self.textEdit.append(f"Vertical servo moved : {self.servo_angle} degree")
+    def move_servo_left(self):
+        requests.get(f'http://{self.ESP_IP}/servo_motors?control={1}&value={self.servo_angle}')
+        self.textEdit.append(f"Horizontal servo moved : {self.servo_angle} degree")
+    def move_servo_right(self):
+        requests.get(f'http://{self.ESP_IP}/servo_motors?control={1}&value={-self.servo_angle}')
+        self.textEdit.append(f"Horizontal servo moved : {-self.servo_angle} degree")
 
     def update_left_speed(self):    
         self.left_speed=int(self.LeftSpeed.currentText())
@@ -118,6 +148,14 @@ class MyGui(QMainWindow):
             self.pressed_keys.add(Qt.Key_D)
             self.right_backward_start()  # Trigger the start action immediately
             self.release_timer.stop()
+        elif event.key() == Qt.Key_I:
+            self.move_servo_up()
+        elif event.key() == Qt.Key_K:
+            self.move_servo_down()
+        elif event.key() == Qt.Key_J:
+            self.move_servo_left()
+        elif event.key() == Qt.Key_L:
+            self.move_servo_right()
 
     def keyReleaseEvent(self, event):
         """Override keyReleaseEvent to start a timer when key is released."""
@@ -167,8 +205,10 @@ class MyGui(QMainWindow):
 
     def closeEvent(self, event):
         """Handle the window close event and release the video capture."""
-        self.video_thread.stop()  # Stop the capture thread
-        event.accept()
+        try:
+            self.video_thread.stop()  # Stop the capture thread
+            event.accept()
+        except:0
 
     def left_forward_start(self):
         if not self.left_stop :return

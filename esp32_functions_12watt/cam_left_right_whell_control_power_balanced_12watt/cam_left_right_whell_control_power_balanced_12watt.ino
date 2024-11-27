@@ -6,8 +6,8 @@
 // create two Servo objects for two motors
 Servo servoHorizontal;
 Servo servoVertical;
-const int servoHorizontalPin = 2;  // id 1
-const int servoVerticalPin = 14;   // id 2
+const int servoHorizontalPin = 4;  // id 1
+const int servoVerticalPin = 2;   // id 2
 int servoHorizontalAngle= 0; 
 int servoVerticalAngle= 0; 
 
@@ -62,7 +62,7 @@ const int motor1In1 = 12; // Left Front (Motor 1)
 const int motor1In2 = 13; // Left Rear (Motor 2)
 
 // Right Motors (L298N2)
-const int motor3In1 = 0; // Right Front (Motor 3)
+const int motor3In1 = 14; // Right Front (Motor 3)
 const int motor3In2 = 15;
 const int min_wheel_speed=255* 0.25;
 const int max_wheel_speed=255* 0.75;
@@ -216,17 +216,20 @@ void moveSelectedServo(int servoId, int angle) {
     servoHorizontal.write(servoHorizontalAngle);
     Serial.print("Moving Servo Horizontal to ");
     Serial.println(servoHorizontalAngle);
+    delay(500);
+    analogWrite(ledPin, 0);
   }
   else if (servoId == 2) {
     servoVerticalAngle= max(0, min ( servoVerticalAngle+ angle,180));
     servoVertical.write(servoVerticalAngle);
     Serial.print("Moving Servo Vertical to ");
+    delay(500);  
     Serial.println(servoVerticalAngle);
   }
   else {
     Serial.println("Invalid servo ID.");
   }
-  delay(200);  
+  
 }
 
 void flash_light(int control, int intensity){

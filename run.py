@@ -71,8 +71,7 @@ class MyGui(QMainWindow):
         self.release_timer.timeout.connect(self.handle_key_release)
         self.key_actions = {}
         self.show()
-        # self.take_ip_stream()
-    
+
     def take_ip_stream(self):  # Set up the video capture thread
         self.ESP_IP= self.IPAddress.text().strip().replace(" ", "").replace("\t", "")
         if self.ESP_IP :

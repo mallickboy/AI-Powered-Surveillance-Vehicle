@@ -10,14 +10,14 @@ from ultralytics import YOLO
 
 # Define a VideoCapture thread class
 class VideoCaptureAndDetectThread(QThread):
-    frameProcessed = pyqtSignal(np.ndarray)  # Signal to emit processed frames
+    frameProcessed = pyqtSignal(np.ndarray)  # emit processed frames
 
     def __init__(self, url, model_path):
         super().__init__()
         self.url = url
         self.cap = cv2.VideoCapture(url)
         self.running = True
-        self.model = YOLO(model_path)  # Load YOLO model
+        self.model = YOLO(model_path)  # loading YOLO model
         self.font = cv2.FONT_HERSHEY_SIMPLEX
         self.machine_learning= False
 
@@ -37,8 +37,6 @@ class VideoCaptureAndDetectThread(QThread):
                             confidence = int(box.conf[0].numpy() * 100)
                             index_class = int(box.cls[0])
                             name_class = results[0].names[index_class]
-
-                            # Draw bounding box and label
                             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2) # BGR
                             cv2.putText(
                                 frame,
@@ -56,13 +54,12 @@ class VideoCaptureAndDetectThread(QThread):
         self.running = False
         self.cap.release()
 
-# Load the .ui file using uic
 class MyGui(QMainWindow): # FaceDetection
     def __init__(self):
         super(MyGui, self).__init__()
         uic.loadUi("./esp32_app/form.ui", self)
-        self.setFixedSize(810, 830)  # Set fixed window size (800x600 for display)
-        self.setWindowTitle("Unmanned Ground Vehicle (UGV)")
+        self.setFixedSize(810, 830)  # window size
+        self.setWindowTitle("Wireless Surveillance Vehicle (ESP 32 CAM)")
         self.start, self.ESP_IP, self.servo_angle= False, None, int(self.ServoAngle.currentText())
         self.StartOperation.pressed.connect(self.take_ip_stream)  # Taking ip 
         self.left_stop, self.right_stop, self.flash, self.machine_learning=True, True, False, False
@@ -70,6 +67,8 @@ class MyGui(QMainWindow): # FaceDetection
         # flash light and ml object detection
         self.FlashLight.pressed.connect(self.flash_light)
         self.ObjectDetection.pressed.connect(self.object_detection)
+        self.FlashLight.setStyleSheet("background-color: rgba(63, 195, 128, 0.8);")  # green
+        self.ObjectDetection.setStyleSheet("background-color: rgba(63, 195, 128,0.8);") # green
         # Servo motors
         self.ServoAngle.currentIndexChanged.connect(self.update_servo_angle)
         self.ServoUp.pressed.connect(self.move_servo_up)
@@ -95,17 +94,17 @@ class MyGui(QMainWindow): # FaceDetection
         self.key_actions = {}
         self.show()
 
-    def take_ip_stream(self):  # Set up the video capture and detection thread
+    def take_ip_stream(self):  # video capture and detection thread
         self.ESP_IP = self.IPAddress.text().strip().replace(" ", "").replace("\t", "")
         if self.ESP_IP:
             try:
-                requests.get("http://192.168.0.102/control?var=lenc&val=1") #  Horizontal flip
-                requests.get("http://192.168.0.102/control?var=vflip&val=1") # Vertical flip
-                requests.get("http://192.168.0.102/control?var=framesize&val=9") # Default stream 800 * 600 px
+                requests.get(f"http://{self.ESP_IP}/control?var=lenc&val=1") #  Horizontal flip
+                requests.get(f"http://{self.ESP_IP}/control?var=vflip&val=1") # Vertical flip
+                requests.get(f"http://{self.ESP_IP}/control?var=framesize&val=9") # Default stream 800 * 600 px
             except:0
             try:
                 self.textEdit.append(f"Taken IP Address : {self.ESP_IP}")
-                model_path = "./yolo/yolov10n.pt"  # Replace with your YOLO model path
+                model_path = "./yolo/yolov10n.pt"  # YOLO model path
                 self.video_thread = VideoCaptureAndDetectThread(f'http://{self.ESP_IP}:81/stream', model_path)
                 self.video_thread.frameProcessed.connect(self.update_frame)
 
@@ -113,16 +112,16 @@ class MyGui(QMainWindow): # FaceDetection
                 self.start = True
 
                 if self.groupBox_Video.layout() is None:
-                    self.groupBox_Video.setLayout(QVBoxLayout())  # Create a layout if not set
+                    self.groupBox_Video.setLayout(QVBoxLayout())  # creating layout
 
                 self.video_label = QLabel(self)
                 self.groupBox_Video.layout().addWidget(self.video_label)
                 self.video_label.setFixedSize(800, 600)
-                self.video_label.setContentsMargins(0, 0, 0, 0)  # Remove padding around QLabel
+                self.video_label.setContentsMargins(0, 0, 0, 0)  #  padding around QLabel
 
                 layout = self.groupBox_Video.layout()
-                layout.setContentsMargins(0, 0, 0, 0)  # Remove padding around the layout
-                layout.setSpacing(0)  # Remove any spacing between widgets
+                layout.setContentsMargins(0, 0, 0, 0)  # padding around the layout
+                layout.setSpacing(0)  # spacing between widgets
 
             except Exception as e:
                 self.textEdit.append(f"Error: {e}")
@@ -151,23 +150,25 @@ class MyGui(QMainWindow): # FaceDetection
             requests.get(f'http://{self.ESP_IP}/flash_light?control={1}&value={int(self.FlashIntensity.currentText())}')
             self.flash= True
             self.textEdit.append("Starting Flash Light")
-            self.FlashLight.setStyleSheet("background-color: rgba(63, 195, 128,0.8);")
+            self.FlashLight.setStyleSheet("background-color: rgba(237, 52, 75 ,0.8);") # red
         else:
             requests.get(f'http://{self.ESP_IP}/flash_light?control={0}&value={0}')
             self.textEdit.append("Stopping Flash Light")
             self.FlashLight.setStyleSheet("background-color: white;")
             self.flash= False
+            self.FlashLight.setStyleSheet("background-color: rgba(63, 195, 128, 0.8);")  # green
     def object_detection(self):
         if self.machine_learning: # already ml: True
             self.video_thread.machine_learning= False
             self.machine_learning= False
             self.textEdit.append("Stopping Object Detection")
             self.ObjectDetection.setStyleSheet("background-color: white;")
+            self.ObjectDetection.setStyleSheet("background-color: rgba(63, 195, 128,0.8);") # green
         else:
             self.video_thread.machine_learning= True
             self.machine_learning= True
             self.textEdit.append("Starting Object Detection")
-            self.ObjectDetection.setStyleSheet("background-color: rgba(63, 195, 128,0.8);")
+            self.ObjectDetection.setStyleSheet("background-color: rgba(237, 52, 75 ,0.8);") # red
 
     def update_servo_angle(self):    
         self.servo_angle=int(self.ServoAngle.currentText())

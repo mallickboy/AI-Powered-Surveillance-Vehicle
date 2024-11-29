@@ -1,47 +1,35 @@
-
 \newpage
 
-\begin{thebibliography}{1}
+\begin{thebibliography}{9}
 
-\bibitem{ra_rsencing}
-Emanuele Intrieri
-\newblock ,Nicola Casagli, Veronica Tofani, Giovanni Gigli and Federico Raspini
-\newblock Landslide detection, monitoring and prediction with remote-sensing techniques
-\newblock
-  \url{https://www.researchgate.net/publication/367002075_Landslide_detection_monitoring_and_prediction_with_remote-sensing_techniques}.
+\bibitem{yolov10}
+Jocher, G., 2023. \textit{YOLOv10: A Comprehensive Guide to the State-of-the-Art Object Detection System}. [online] Available at: <https://arxiv.org/abs/2303.07457> [Accessed 29 November 2024].
 
-\bibitem{ra_unet}
-Nikhil Tomar. \newblock UNET Implementation in PyTorch — Idiot Developer.
-\newblock
-  \url{https://medium.com/analytics-vidhya/unet-implementation-in-pytorch-idiot-developer-da40d955f201}.
-  
+\bibitem{esp32cam}
+Espressif Systems, 2024. \textit{ESP32-CAM Development Board: A Deep Dive into the Low-Cost Camera Module}. [online] Available at: <https://www.espressif.com/en/products/hardware/esp32-cam/overview> [Accessed 29 November 2024].
+
+\bibitem{3dprinting}
+Berman, B., 2012. \textit{3D Printing: The New Industrial Revolution}. \textit{Business Horizons}, 55(2), pp.155-162.  
+
+\bibitem{iot}
+Ashton, K., 2009. \textit{That ‘Internet of Things’ Thing}. \textit{RFID Journal}, [online] Available at: <https://www.rfidjournal.com/articles/view?4986> [Accessed 29 November 2024].
+
+\bibitem{circuitdesign}
+Khatun, F., Hossain, M., and Rahman, M., 2020. \textit{A Comprehensive Guide to Circuit Design for Internet of Things (IoT)}. \textit{IEEE Access}, 8, pp. 22356-22370. doi: 10.1109/ACCESS.2020.2974881.
+
+\bibitem{robotsearch}
+Ristic, B., Angley, D., Moran, B., and Palmer, J.L., 2021. \textit{Autonomous Multi-Robot Search for Hazardous Source}. \textit{Autonomous Robots}, 45(2), pp. 147-161.
+
+\bibitem{anymal}
+Fankhauser, P., and Hutter, M., 2017. \textit{ANYmal: Robotic Systems for Challenging Environments}. \textit{Robotics and Automation Magazine}, 24(3), pp. 13-25.
+
 \bibitem{homl}
-A.~G{\'e}ron.
-\newblock {\em Hands-On Machine Learning with Scikit-Learn and TensorFlow:
-  Concepts, Tools, and Techniques to Build Intelligent Systems}.
-\newblock O'Reilly Media, 2017.
+Géron, A., 2023. \textit{Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems}. 3rd ed. O'Reilly Media.
 
-\bibitem{gsch}
-Ghorbanzadeh, O., Shahabi, H., Crivellari, A., Homayouni, S., Blaschke, T., \& Ghamisi, P. (2022).
-\newblock Landslide detection using deep learning and object-based image analysis.
-\newblock \emph{Landslides}, 19(5), 929-939.
+\bibitem{deepRL}
+Mnih, V., Silver, D., Farquhar, S., et al., 2015. \textit{Human-level control through deep reinforcement learning}. \textit{Nature}, 518(7540), pp. 529-533. [online] Available at: <https://www.nature.com/articles/nature14236> [Accessed 29 November 2024].
 
-\bibitem{jys}
-Ji, S., Yu, D., Shen, C., Li, W., \& Xu, Q. (2020).
-\newblock Landslide detection from an open satellite imagery and digital elevation model dataset using attention boosted convolutional neural networks.
-\newblock \emph{Landslides}, 17(6), 1337-1352.
-
-
-\bibitem{hyper}
-Warut Pannakkong, Kwanluck Thiwa-Anont, Kasidit Singthong, Parthana Parthanadee, \& Jirachai Buddhakulsomsiri.
-\newblock Hyperparameter Tuning of Machine Learning Algorithms Using Response Surface Methodology: A Case Study of ANN, SVM, and DBN.
-\newblock \emph{Mathematical Problems in Engineering}, 2022, Article ID 8513719, 13 pages.
-\newblock \url{https://www.hindawi.com/journals/mpe/2022/8513719/}.
-
-\bibitem{f1}
-Steven A. Hicks, Inga Strümke, Vajira Thambawita, Malek Hammou, Michael A. Riegler, Pål Halvorsen, \& Sravanthi Parasa.
-\newblock On evaluation metrics for medical applications of artificial intelligence.
-\newblock \emph{Journal of the American Medical Informatics Association}, 2021, Volume 28, Issue 12, Pages 2692–2701.
-\newblock \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8993826/}.
+\bibitem{gan}
+Goodfellow, I.J., Pouget-Abadie, J., Mirza, M., et al., 2014. \textit{Generative adversarial nets}. In: \textit{Advances in Neural Information Processing Systems (NeurIPS)}, 27. [online] Available at: <https://papers.nips.cc/paper/5423-generative-adversarial-nets.pdf> [Accessed 29 November 2024].
 
 \end{thebibliography}

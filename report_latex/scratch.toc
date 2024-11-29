@@ -1,6 +1,6 @@
 \contentsline {section}{\numberline {1}Introduction}{2}{section.0.1}%
 \contentsline {subsection}{\numberline {1.1}Problem Statement }{2}{subsection.0.1.1}%
-\contentsline {subsection}{\numberline {1.2}Objective }{2}{subsection.0.1.2}%
+\contentsline {subsection}{\numberline {1.2}Objective}{2}{subsection.0.1.2}%
 \contentsline {section}{\numberline {2}Literature Review}{5}{section.0.2}%
 \contentsline {subsection}{\numberline {2.1}Autonomous Multi-Robot Search for Hazardous Source}{5}{subsection.0.2.1}%
 \contentsline {subsection}{\numberline {2.2}ANYmal: Robotic Systems for Challenging Environments}{5}{subsection.0.2.2}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.29)  30 NOV 2024 01:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.29)  30 NOV 2024 03:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -710,24 +710,24 @@ LaTeX Warning: Label `fig:base' multiply defined.
 )
 \openout1 = `scratch.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  (D:\LateX\Miktex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count328
@@ -785,7 +785,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 21.
+Package hyperref Info: Link coloring OFF on input line 24.
 (scratch.out) (scratch.out)
 \@outlinefile=\write4
 \openout4 = `scratch.out'.
@@ -825,21 +825,21 @@ Package hyperref Info: Link coloring OFF on input line 21.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 27.
+(Font)              size <24.88> substituted on input line 33.
 
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
-7.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 3
+4.
 (D:\LateX\Miktex\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 39.
+(Font)              size <17.28> substituted on input line 48.
 
 <iiitk_logo.jpg, id=102, 264.38776pt x 294.50024pt>
 File: iiitk_logo.jpg Graphic file (type jpg)
 <use iiitk_logo.jpg>
-Package pdftex.def Info: iiitk_logo.jpg  used on input line 42.
+Package pdftex.def Info: iiitk_logo.jpg  used on input line 51.
 (pdftex.def)             Requested size: 241.84843pt x 269.40216pt.
 [1
 
@@ -847,48 +847,48 @@ Package pdftex.def Info: iiitk_logo.jpg  used on input line 42.
 
 {C:/Users/tamal/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./iiitk_logo
 .jpg>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 88.
 
  (D:\LateX\Miktex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 79.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 88.
 
 
 (D:\LateX\Miktex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 77--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 77--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 77--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 77--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 77--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 77--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--84
+Underfull \hbox (badness 10000) in paragraph at lines 77--93
 
  []
 
@@ -896,32 +896,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--84
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 90--121
+Overfull \hbox (6.50357pt too wide) in paragraph at lines 99--130
+\OT1/cmr/m/n/12 We hereby de-clare that the work be-ing sub-mit-ted in this the
+-sis en-ti-tled,\OT1/cmr/bx/n/12 "AI-Powered
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--121
+Underfull \hbox (badness 10000) in paragraph at lines 99--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--121
+Underfull \hbox (badness 10000) in paragraph at lines 99--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--121
+Underfull \hbox (badness 10000) in paragraph at lines 99--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--121
+Underfull \hbox (badness 10000) in paragraph at lines 99--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--121
+Underfull \hbox (badness 10000) in paragraph at lines 99--130
 
  []
 
@@ -929,32 +935,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--121
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 126--157
+Underfull \hbox (badness 10000) in paragraph at lines 135--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--157
+Underfull \hbox (badness 10000) in paragraph at lines 135--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--157
+Underfull \hbox (badness 10000) in paragraph at lines 135--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--157
+Underfull \hbox (badness 10000) in paragraph at lines 135--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--157
+Underfull \hbox (badness 10000) in paragraph at lines 135--166
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--157
+Underfull \hbox (badness 10000) in paragraph at lines 135--166
 
  []
 
@@ -962,7 +968,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--157
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
@@ -983,11 +989,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 	\newpage
+l.231 	\newpage
                 [1
 
 ] [2]
-Overfull \hbox (8.13947pt too wide) in paragraph at lines 230--231
+Overfull \hbox (8.13947pt too wide) in paragraph at lines 266--267
 []\OT1/cmr/m/n/12 Developing and im-ple-ment-ing \OT1/cmr/bx/n/12 APIs \OT1/cmr
 /m/n/12 for \OT1/cmr/bx/n/12 ex-ter-nal con-trol \OT1/cmr/m/n/12 of the ve-hi-c
 le through
@@ -996,184 +1002,184 @@ le through
 [3] [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 269--273
+Underfull \hbox (badness 10000) in paragraph at lines 307--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--273
+Underfull \hbox (badness 10000) in paragraph at lines 307--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--273
+Underfull \hbox (badness 10000) in paragraph at lines 307--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--279
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--279
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--279
+Underfull \hbox (badness 10000) in paragraph at lines 314--318
 
  []
 
 [5] [6] [7
 
 ]
-<espCam.png, id=208, 179.92218pt x 170.13562pt>
+<espCam.png, id=244, 179.92218pt x 170.13562pt>
 File: espCam.png Graphic file (type png)
 <use espCam.png>
-Package pdftex.def Info: espCam.png  used on input line 346.
+Package pdftex.def Info: espCam.png  used on input line 387.
 (pdftex.def)             Requested size: 213.39568pt x 201.80449pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 343--349
+Underfull \hbox (badness 10000) in paragraph at lines 384--390
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 365--366
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
-<l298n.jpg, id=218, 943.525pt x 1003.75pt>
+<l298n.jpg, id=255, 943.525pt x 1003.75pt>
 File: l298n.jpg Graphic file (type jpg)
 <use l298n.jpg>
-Package pdftex.def Info: l298n.jpg  used on input line 370.
+Package pdftex.def Info: l298n.jpg  used on input line 411.
 (pdftex.def)             Requested size: 213.39568pt x 227.01334pt.
 [9 <./espCam.png> <./l298n.jpg>]
-<powerCircuit.png, id=227, 137.7647pt x 128.73094pt>
+<powerCircuit.png, id=264, 137.7647pt x 128.73094pt>
 File: powerCircuit.png Graphic file (type png)
 <use powerCircuit.png>
-Package pdftex.def Info: powerCircuit.png  used on input line 393.
+Package pdftex.def Info: powerCircuit.png  used on input line 434.
 (pdftex.def)             Requested size: 192.0548pt x 179.47955pt.
-<buckConverter.png, id=228, 161.85469pt x 183.68625pt>
+<buckConverter.png, id=265, 161.85469pt x 183.68625pt>
 File: buckConverter.png Graphic file (type png)
 <use buckConverter.png>
-Package pdftex.def Info: buckConverter.png  used on input line 399.
+Package pdftex.def Info: buckConverter.png  used on input line 440.
 (pdftex.def)             Requested size: 192.0548pt x 217.9727pt.
-<base.png, id=229, 204.01219pt x 163.3603pt>
+<base.png, id=266, 204.01219pt x 163.3603pt>
 File: base.png Graphic file (type png)
 <use base.png>
-Package pdftex.def Info: base.png  used on input line 424.
+Package pdftex.def Info: base.png  used on input line 465.
 (pdftex.def)             Requested size: 192.0548pt x 153.793pt.
-<bodMotor.png, id=230, 216.05719pt x 167.87718pt>
+<bodMotor.png, id=267, 216.05719pt x 167.87718pt>
 File: bodMotor.png Graphic file (type png)
 <use bodMotor.png>
-Package pdftex.def Info: bodMotor.png  used on input line 430.
+Package pdftex.def Info: bodMotor.png  used on input line 471.
 (pdftex.def)             Requested size: 192.0548pt x 149.23346pt.
  [10 <./powerCircuit.png> <./buckConverter.png>]
-<powerBank.png, id=241, 139.27031pt x 182.18062pt>
+<powerBank.png, id=278, 139.27031pt x 182.18062pt>
 File: powerBank.png Graphic file (type png)
 <use powerBank.png>
-Package pdftex.def Info: powerBank.png  used on input line 448.
+Package pdftex.def Info: powerBank.png  used on input line 489.
 (pdftex.def)             Requested size: 213.39568pt x 279.15239pt.
  [11 <./base.png> <./bodMotor.png> <./powerBank.png>]
-<s90.jpg, id=254, 1426.32875pt x 1179.40625pt>
+<s90.jpg, id=291, 1426.32875pt x 1179.40625pt>
 File: s90.jpg Graphic file (type jpg)
 <use s90.jpg>
-Package pdftex.def Info: s90.jpg  used on input line 471.
+Package pdftex.def Info: s90.jpg  used on input line 512.
 (pdftex.def)             Requested size: 128.0387pt x 105.87204pt.
-<wheel.png, id=255, 201.75375pt x 153.57375pt>
+<wheel.png, id=292, 201.75375pt x 153.57375pt>
 File: wheel.png Graphic file (type png)
 <use wheel.png>
-Package pdftex.def Info: wheel.png  used on input line 477.
+Package pdftex.def Info: wheel.png  used on input line 518.
 (pdftex.def)             Requested size: 128.0387pt x 97.46199pt.
-<espHolder.png, id=256, 231.86626pt x 139.27031pt>
+<espHolder.png, id=293, 231.86626pt x 139.27031pt>
 File: espHolder.png Graphic file (type png)
 <use espHolder.png>
-Package pdftex.def Info: espHolder.png  used on input line 483.
+Package pdftex.def Info: espHolder.png  used on input line 524.
 (pdftex.def)             Requested size: 128.0387pt x 76.90703pt.
-<usbPowerbank.png, id=257, 654.94687pt x 252.945pt>
+<usbPowerbank.png, id=303, 654.94687pt x 252.945pt>
 File: usbPowerbank.png Graphic file (type png)
 <use usbPowerbank.png>
-Package pdftex.def Info: usbPowerbank.png  used on input line 531.
+Package pdftex.def Info: usbPowerbank.png  used on input line 574.
 (pdftex.def)             Requested size: 192.0548pt x 74.17041pt.
-<circuitDiagram.png, id=258, 652.839pt x 548.449pt>
+<circuitDiagram.png, id=304, 652.839pt x 548.449pt>
 File: circuitDiagram.png Graphic file (type png)
 <use circuitDiagram.png>
-Package pdftex.def Info: circuitDiagram.png  used on input line 537.
+Package pdftex.def Info: circuitDiagram.png  used on input line 580.
 (pdftex.def)             Requested size: 192.0548pt x 161.33914pt.
  [12 <./s90.jpg> <./wheel.png> <./espHolder.png>] [13 <./usbPowerbank.png> <./c
 ircuitDiagram.png>]
 [14
 
 ]
-Overfull \hbox (5.57378pt too wide) in paragraph at lines 565--566
+Overfull \hbox (5.57378pt too wide) in paragraph at lines 608--609
 \OT1/cmr/m/n/12 lac-tic Acid) ma-te-rial, cho-sen for its strength, pre-ci-sion
 , and lightweight
  []
 
 [15] [16] [17]
-<person.png, id=308, 494.44725pt x 525.76425pt>
+<person.png, id=375, 494.44725pt x 525.76425pt>
 File: person.png Graphic file (type png)
 <use person.png>
-Package pdftex.def Info: person.png  used on input line 673.
+Package pdftex.def Info: person.png  used on input line 724.
 (pdftex.def)             Requested size: 128.0387pt x 136.14995pt.
 
-Underfull \hbox (badness 4765) in paragraph at lines 674--674
+Underfull \hbox (badness 4765) in paragraph at lines 725--725
 []\OT1/cmr/m/n/12 Figure 13: []Detecting
  []
 
-<bottle.png, id=309, 489.62926pt x 526.96875pt>
+<bottle.png, id=376, 489.62926pt x 526.96875pt>
 File: bottle.png Graphic file (type png)
 <use bottle.png>
-Package pdftex.def Info: bottle.png  used on input line 679.
+Package pdftex.def Info: bottle.png  used on input line 730.
 (pdftex.def)             Requested size: 128.0387pt x 137.79665pt.
 
-Underfull \hbox (badness 4765) in paragraph at lines 680--680
+Underfull \hbox (badness 4765) in paragraph at lines 731--731
 []\OT1/cmr/m/n/12 Figure 14: []Detecting
  []
 
-<phone.png, id=310, 492.6405pt x 526.96875pt>
+<phone.png, id=377, 492.6405pt x 526.96875pt>
 File: phone.png Graphic file (type png)
 <use phone.png>
-Package pdftex.def Info: phone.png  used on input line 685.
+Package pdftex.def Info: phone.png  used on input line 736.
 (pdftex.def)             Requested size: 128.0387pt x 136.96039pt.
 [18 <./person.png> <./bottle.png> <./phone.png>] [19] [20
 
 ]
-<wheelTest1.png, id=338, 636.12656pt x 295.1025pt>
+<wheelTest1.png, id=407, 636.12656pt x 295.1025pt>
 File: wheelTest1.png Graphic file (type png)
 <use wheelTest1.png>
-Package pdftex.def Info: wheelTest1.png  used on input line 779.
+Package pdftex.def Info: wheelTest1.png  used on input line 832.
 (pdftex.def)             Requested size: 192.0548pt x 89.09428pt.
-<wheelTest2.png, id=339, 637.63219pt x 244.66406pt>
+<wheelTest2.png, id=408, 637.63219pt x 244.66406pt>
 File: wheelTest2.png Graphic file (type png)
 <use wheelTest2.png>
-Package pdftex.def Info: wheelTest2.png  used on input line 785.
+Package pdftex.def Info: wheelTest2.png  used on input line 838.
 (pdftex.def)             Requested size: 192.0548pt x 73.69096pt.
-<servoMotorTest1.png, id=340, 623.32875pt x 248.42813pt>
+<servoMotorTest1.png, id=409, 623.32875pt x 248.42813pt>
 File: servoMotorTest1.png Graphic file (type png)
 <use servoMotorTest1.png>
-Package pdftex.def Info: servoMotorTest1.png  used on input line 797.
+Package pdftex.def Info: servoMotorTest1.png  used on input line 850.
 (pdftex.def)             Requested size: 192.0548pt x 76.54187pt.
-<servoMotorTest2.png, id=341, 633.86812pt x 294.34969pt>
+<servoMotorTest2.png, id=410, 633.86812pt x 294.34969pt>
 File: servoMotorTest2.png Graphic file (type png)
 <use servoMotorTest2.png>
-Package pdftex.def Info: servoMotorTest2.png  used on input line 803.
+Package pdftex.def Info: servoMotorTest2.png  used on input line 856.
 (pdftex.def)             Requested size: 192.0548pt x 89.1814pt.
  [21 <./wheelTest1.png> <./wheelTest2.png>]
-<flashlightTest1.png, id=352, 625.58719pt x 243.91125pt>
+<flashlightTest1.png, id=421, 625.58719pt x 243.91125pt>
 File: flashlightTest1.png Graphic file (type png)
 <use flashlightTest1.png>
-Package pdftex.def Info: flashlightTest1.png  used on input line 815.
+Package pdftex.def Info: flashlightTest1.png  used on input line 868.
 (pdftex.def)             Requested size: 192.0548pt x 74.87851pt.
-<flashlightTest2.png, id=353, 626.34pt x 250.68657pt>
+<flashlightTest2.png, id=422, 626.34pt x 250.68657pt>
 File: flashlightTest2.png Graphic file (type png)
 <use flashlightTest2.png>
-Package pdftex.def Info: flashlightTest2.png  used on input line 821.
+Package pdftex.def Info: flashlightTest2.png  used on input line 874.
 (pdftex.def)             Requested size: 192.0548pt x 76.86667pt.
  [22 <./servoMotorTest1.png> <./servoMotorTest2.png> <./flashlightTest1.png> <.
 /flashlightTest2.png>]
-Overfull \hbox (5.14717pt too wide) in paragraph at lines 904--905
+Overfull \hbox (5.14717pt too wide) in paragraph at lines 957--958
 []\OT1/cmr/m/n/12 Continuous op-er-a-tion, in-clud-ing video stream-ing and mo-
 tor ac-tiv-ity, lasted
  []
@@ -1182,27 +1188,34 @@ tor ac-tiv-ity, lasted
 
 ] [26] [27
 
-] [28] [29] (scratch.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 7--12
-\OT1/cmr/m/n/12 tech-niques  []$\OT1/cmtt/m/n/12 https : / / www . researchgate
- . net / publication / 367002075 _
+]
+Overfull \hbox (2.03198pt too wide) in paragraph at lines 1059--1060
+\OT1/cmr/m/n/12 AI-Powered Surveil-lance Ve-hi-cle project suc-cess-fully in-te
+-grates wire-less video stream-
+ []
+
+[28] [29] (scratch.bbl
+Underfull \hbox (badness 6808) in paragraph at lines 9--10
+[]\OT1/cmr/m/n/12 Espressif Sys-tems, 2024. \OT1/cmr/m/it/12 ESP32-CAM De-vel-o
+p-ment Board: A Deep
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--12
-\OT1/cmtt/m/n/12 Landslide _ detection _ monitoring _ and _ prediction _ with _
- remote-[]sensing _
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+\OT1/cmr/m/it/12 Dive into the Low-Cost Cam-era Mod-ule\OT1/cmr/m/n/12 . [on-li
+ne] Avail-able at:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--17
-[]\OT1/cmr/m/n/12 Nikhil Tomar.  UNET Im-ple-men-ta-tion in Py-Torch | Id-
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+\OT1/cmr/m/n/12 <https://www.espressif.com/en/products/hardware/esp32-cam/overv
+iew>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--17
-\OT1/cmr/m/n/12 iot De-vel-oper.  []$\OT1/cmtt/m/n/12 https : / / medium . com 
-/ analytics-[]vidhya /
+Underfull \hbox (badness 1448) in paragraph at lines 33--34
+[]\OT1/cmr/m/n/12 Goodfellow, I.J., Pouget-Abadie, J., Mirza, M., et al., 2014.
+ \OT1/cmr/m/it/12 Gen-er-a-
  []
 
 ) [30
@@ -1221,26 +1234,25 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `scratch.out' has not changed.
-(rerunfilecheck)             Checksum: A85AB72A73439E1F772560F719C2F141;4078.
+(rerunfilecheck)             Checksum: 568679FFBEF2106F277DFD822C9735C7;4070.
  ) 
 Here is how much of TeX's memory you used:
- 25496 strings out of 474486
- 482024 string characters out of 5757355
+ 25512 strings out of 474486
+ 482397 string characters out of 5757355
  1935542 words of memory out of 5000000
- 47195 multiletter control sequences out of 15000+600000
- 568527 words of font info for 71 fonts, out of 8000000 for 9000
+ 47205 multiletter control sequences out of 15000+600000
+ 568358 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,93p,746b,662s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,9n,93p,800b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tamal\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><D:/LateX/Miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/LateX/Mi
 ktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/LateX/Miktex/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb><D:/LateX/Miktex/fonts/type1/public/amsfonts/cm/cmr17
 .pfb><D:/LateX/Miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/LateX/Mikte
-x/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/LateX/Miktex/fonts/type1/public
-/amsfonts/cm/cmtt12.pfb>
-Output written on scratch.pdf (37 pages, 2516461 bytes).
+x/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on scratch.pdf (37 pages, 2524711 bytes).
 PDF statistics:
- 512 PDF objects out of 1000 (max. 8388607)
- 164 named destinations out of 1000 (max. 500000)
+ 575 PDF objects out of 1000 (max. 8388607)
+ 171 named destinations out of 1000 (max. 500000)
  315 words of extra memory for PDF output out of 10000 (max. 10000000)
 

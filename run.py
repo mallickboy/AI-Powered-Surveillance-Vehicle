@@ -44,7 +44,7 @@ class VideoCaptureAndDetectThread(QThread):
                                 (x1 + 8, y1 - 12),
                                 self.font,
                                 0.5,
-                                (255, 255, 255),
+                                (0, 0, 255), # (255, 255, 255)
                                 2,
                             )
                 self.frameProcessed.emit(frame)  # emit processed frame
@@ -98,8 +98,8 @@ class MyGui(QMainWindow): # FaceDetection
         self.ESP_IP = self.IPAddress.text().strip().replace(" ", "").replace("\t", "")
         if self.ESP_IP:
             try:
-                requests.get(f"http://{self.ESP_IP}/control?var=lenc&val=1") #  Horizontal flip
-                requests.get(f"http://{self.ESP_IP}/control?var=vflip&val=1") # Vertical flip
+                # requests.get(f"http://{self.ESP_IP}/control?var=lenc&val=1") #  Horizontal flip
+                # requests.get(f"http://{self.ESP_IP}/control?var=vflip&val=1") # Vertical flip
                 requests.get(f"http://{self.ESP_IP}/control?var=framesize&val=9") # Default stream 800 * 600 px
             except:0
             try:
@@ -174,11 +174,11 @@ class MyGui(QMainWindow): # FaceDetection
         self.servo_angle=int(self.ServoAngle.currentText())
         self.textEdit.append(f"Servo Motor rotation Changed to: {self.servo_angle} deg")
     def move_servo_up(self):
-        requests.get(f'http://{self.ESP_IP}/servo_motors?control={2}&value={-self.servo_angle}')
-        self.textEdit.append(f"Vertical servo moved : {-self.servo_angle} degree")
-    def move_servo_down(self):
         requests.get(f'http://{self.ESP_IP}/servo_motors?control={2}&value={self.servo_angle}')
         self.textEdit.append(f"Vertical servo moved : {self.servo_angle} degree")
+    def move_servo_down(self):
+        requests.get(f'http://{self.ESP_IP}/servo_motors?control={2}&value={-self.servo_angle}')
+        self.textEdit.append(f"Vertical servo moved : {-self.servo_angle} degree")
     def move_servo_left(self):
         requests.get(f'http://{self.ESP_IP}/servo_motors?control={1}&value={self.servo_angle}')
         self.textEdit.append(f"Horizontal servo moved : {self.servo_angle} degree")
@@ -267,7 +267,7 @@ class MyGui(QMainWindow): # FaceDetection
     def left_forward_start(self):
         if not self.left_stop :return
         self.left_stop =False
-        requests.get(f'http://{self.ESP_IP}/left_motors?control={1}&value={self.left_speed}')
+        requests.get(f'http://{self.ESP_IP}/left_motors?control={-1}&value={self.left_speed}')
         self.textEdit.append(f"Left Forward Movement Started\tSpeed: {self.left_speed} %")
     def left_forward_stop(self):
         self.left_stop= True
@@ -277,7 +277,7 @@ class MyGui(QMainWindow): # FaceDetection
     def left_backward_start(self):
         if not self.left_stop :return
         self.left_stop= False
-        requests.get(f'http://{self.ESP_IP}/left_motors?control={-1}&value={self.left_speed}')
+        requests.get(f'http://{self.ESP_IP}/left_motors?control={1}&value={self.left_speed}')
         self.textEdit.append(f"Left Backward Movement Started\tSpeed: {self.left_speed} %")
     def left_backward_stop(self):
         self.left_stop= True
@@ -287,7 +287,7 @@ class MyGui(QMainWindow): # FaceDetection
     def right_forward_start(self):
         if not self.right_stop :return
         self.right_stop= False
-        requests.get(f'http://{self.ESP_IP}/right_motors?control={1}&value={self.right_speed}')
+        requests.get(f'http://{self.ESP_IP}/right_motors?control={-1}&value={self.right_speed}')
         self.textEdit.append(f"Right Forward Movement Started,\tSpeed: {self.right_speed} %")
     def right_forward_stop(self):
         self.right_stop= True
@@ -297,7 +297,7 @@ class MyGui(QMainWindow): # FaceDetection
     def right_backward_start(self):
         if not self.right_stop :return
         self.right_stop= False
-        requests.get(f'http://{self.ESP_IP}/right_motors?control={-1}&value={self.right_speed}')
+        requests.get(f'http://{self.ESP_IP}/right_motors?control={1}&value={self.right_speed}')
         self.textEdit.append(f"Right Backward Movement Started\tSpeed: {self.right_speed} %")
     def right_backward_stop(self):
         self.right_stop= True

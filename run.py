@@ -8,7 +8,7 @@ from PyQt5.QtCore import QTimer, QThread, pyqtSignal
 from PyQt5.QtCore import Qt
 from ultralytics import YOLO
 
-# Define a VideoCapture thread class
+# VideoCapture thread class
 class VideoCaptureAndDetectThread(QThread):
     frameProcessed = pyqtSignal(np.ndarray)  # emit processed frames
 
@@ -142,7 +142,7 @@ class MyGui(QMainWindow): # FaceDetection
     def stop_stream(self):
         if hasattr(self, "video_thread") and self.video_thread.isRunning():
             self.video_thread.stop()
-            self.video_thread.wait()  # Wait for the thread to finish
+            self.video_thread.wait()  # waitting for the thread to finish
             self.textEdit.append("Video stream stopped.")
 
     def flash_light(self):

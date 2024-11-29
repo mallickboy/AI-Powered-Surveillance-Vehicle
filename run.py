@@ -224,6 +224,10 @@ class MyGui(QMainWindow): # FaceDetection
             self.move_servo_left()
         elif event.key() == Qt.Key_L:
             self.move_servo_right()
+        elif event.key() == Qt.Key_F:
+            self.flash_light()
+        elif event.key() == Qt.Key_O:
+            self.object_detection()
 
     def keyReleaseEvent(self, event):
         """Override keyReleaseEvent to start a timer when key is released."""

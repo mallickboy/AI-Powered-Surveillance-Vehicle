@@ -8,16 +8,17 @@
 \contentsline {section}{\numberline {3}System Design and Components}{8}{section.0.3}%
 \contentsline {subsection}{\numberline {3.1}Workflow Overview}{8}{subsection.0.3.1}%
 \contentsline {subsection}{\numberline {3.2}List of Components}{8}{subsection.0.3.2}%
-\contentsline {subsection}{\numberline {3.3}Circuit Design}{12}{subsection.0.3.3}%
-\contentsline {section}{\numberline {4}Implementation}{15}{section.0.4}%
-\contentsline {subsection}{\numberline {4.1}Hardware Assembly}{15}{subsection.0.4.1}%
-\contentsline {subsection}{\numberline {4.2}Software Development}{16}{subsection.0.4.2}%
-\contentsline {subsection}{\numberline {4.3}Object Detection using Machine Learning}{18}{subsection.0.4.3}%
-\contentsline {subsection}{\numberline {4.4}Challenges and Solutions}{19}{subsection.0.4.4}%
+\contentsline {subsection}{\numberline {3.3}Circuit Design}{11}{subsection.0.3.3}%
+\contentsline {section}{\numberline {4}Implementation}{14}{section.0.4}%
+\contentsline {subsection}{\numberline {4.1}Hardware Assembly}{14}{subsection.0.4.1}%
+\contentsline {subsection}{\numberline {4.2}Software Development}{15}{subsection.0.4.2}%
+\contentsline {subsection}{\numberline {4.3}Object Detection using Machine Learning}{17}{subsection.0.4.3}%
+\contentsline {subsection}{\numberline {4.4}Challenges and Solutions}{18}{subsection.0.4.4}%
 \contentsline {section}{\numberline {5}Testing and Performance Evaluation}{21}{section.0.5}%
 \contentsline {subsection}{\numberline {5.1}Test Scenarios}{21}{subsection.0.5.1}%
 \contentsline {subsection}{\numberline {5.2}Observations and Metrics}{23}{subsection.0.5.2}%
 \contentsline {subsection}{\numberline {5.3}Discussion of Results}{24}{subsection.0.5.3}%
+\contentsline {subsection}{\numberline {5.4}Project Resources and Demonstration Links}{24}{subsection.0.5.4}%
 \contentsline {section}{\numberline {6}Applications}{26}{section.0.6}%
 \contentsline {section}{\numberline {7}Conclusion and Future Scope}{28}{section.0.7}%
 \contentsline {subsection}{\numberline {7.1}Conclusion}{28}{subsection.0.7.1}%

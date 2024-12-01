@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.29)  30 NOV 2024 04:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.11.29)  1 DEC 2024 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -836,7 +836,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
 (Font)              size <17.28> substituted on input line 48.
 
-<iiitk_logo.jpg, id=102, 264.38776pt x 294.50024pt>
+<iiitk_logo.jpg, id=106, 264.38776pt x 294.50024pt>
 File: iiitk_logo.jpg Graphic file (type jpg)
 <use iiitk_logo.jpg>
 Package pdftex.def Info: iiitk_logo.jpg  used on input line 51.
@@ -967,12 +967,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--166
 [3
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
-
- []
-
-[4
+] [4
 
 
 ] (scratch.toc)
@@ -989,11 +984,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.231 	\newpage
+l.235 	\newpage
                 [1
 
 ] [2]
-Overfull \hbox (8.13947pt too wide) in paragraph at lines 266--267
+Overfull \hbox (8.13947pt too wide) in paragraph at lines 270--271
 []\OT1/cmr/m/n/12 Developing and im-ple-ment-ing \OT1/cmr/bx/n/12 APIs \OT1/cmr
 /m/n/12 for \OT1/cmr/bx/n/12 ex-ter-nal con-trol \OT1/cmr/m/n/12 of the ve-hi-c
 le through
@@ -1002,205 +997,226 @@ le through
 [3] [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 307--311
+Underfull \hbox (badness 10000) in paragraph at lines 311--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--311
+Underfull \hbox (badness 10000) in paragraph at lines 311--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--311
+Underfull \hbox (badness 10000) in paragraph at lines 311--315
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--318
+Underfull \hbox (badness 10000) in paragraph at lines 318--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--318
+Underfull \hbox (badness 10000) in paragraph at lines 318--322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--318
+Underfull \hbox (badness 10000) in paragraph at lines 318--322
 
  []
 
 [5] [6] [7
 
 ]
-<espCam.png, id=244, 179.92218pt x 170.13562pt>
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
+
+ []
+
+<espCam.png, id=249, 179.92218pt x 170.13562pt>
 File: espCam.png Graphic file (type png)
 <use espCam.png>
-Package pdftex.def Info: espCam.png  used on input line 387.
-(pdftex.def)             Requested size: 213.39568pt x 201.80449pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 384--390
-
- []
-
+Package pdftex.def Info: espCam.png  used on input line 394.
+(pdftex.def)             Requested size: 142.27423pt x 142.2717pt.
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 406--407
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
-<l298n.jpg, id=255, 943.525pt x 1003.75pt>
+<l298n.jpg, id=260, 943.525pt x 1003.75pt>
 File: l298n.jpg Graphic file (type jpg)
 <use l298n.jpg>
-Package pdftex.def Info: l298n.jpg  used on input line 411.
-(pdftex.def)             Requested size: 213.39568pt x 227.01334pt.
-[9 <./espCam.png> <./l298n.jpg>]
-<powerCircuit.png, id=264, 137.7647pt x 128.73094pt>
-File: powerCircuit.png Graphic file (type png)
-<use powerCircuit.png>
-Package pdftex.def Info: powerCircuit.png  used on input line 434.
-(pdftex.def)             Requested size: 192.0548pt x 179.47955pt.
-<buckConverter.png, id=265, 161.85469pt x 183.68625pt>
-File: buckConverter.png Graphic file (type png)
-<use buckConverter.png>
-Package pdftex.def Info: buckConverter.png  used on input line 440.
-(pdftex.def)             Requested size: 192.0548pt x 217.9727pt.
-<base.png, id=266, 204.01219pt x 163.3603pt>
-File: base.png Graphic file (type png)
-<use base.png>
-Package pdftex.def Info: base.png  used on input line 465.
-(pdftex.def)             Requested size: 192.0548pt x 153.793pt.
-<bodMotor.png, id=267, 216.05719pt x 167.87718pt>
-File: bodMotor.png Graphic file (type png)
-<use bodMotor.png>
-Package pdftex.def Info: bodMotor.png  used on input line 471.
-(pdftex.def)             Requested size: 192.0548pt x 149.23346pt.
- [10 <./powerCircuit.png> <./buckConverter.png>]
-<powerBank.png, id=278, 139.27031pt x 182.18062pt>
+Package pdftex.def Info: l298n.jpg  used on input line 422.
+(pdftex.def)             Requested size: 142.25688pt x 142.25475pt.
+<powerBank.png, id=261, 139.27031pt x 182.18062pt>
 File: powerBank.png Graphic file (type png)
 <use powerBank.png>
-Package pdftex.def Info: powerBank.png  used on input line 489.
-(pdftex.def)             Requested size: 213.39568pt x 279.15239pt.
- [11 <./base.png> <./bodMotor.png> <./powerBank.png>]
-<s90.jpg, id=291, 1426.32875pt x 1179.40625pt>
+Package pdftex.def Info: powerBank.png  used on input line 442.
+(pdftex.def)             Requested size: 142.26633pt x 142.26987pt.
+[9 <./espCam.png> <./l298n.jpg>]
+<powerCircuit.png, id=271, 137.7647pt x 128.73094pt>
+File: powerCircuit.png Graphic file (type png)
+<use powerCircuit.png>
+Package pdftex.def Info: powerCircuit.png  used on input line 468.
+(pdftex.def)             Requested size: 142.27759pt x 142.27623pt.
+<buckConverter.png, id=272, 161.85469pt x 183.68625pt>
+File: buckConverter.png Graphic file (type png)
+<use buckConverter.png>
+Package pdftex.def Info: buckConverter.png  used on input line 474.
+(pdftex.def)             Requested size: 142.27202pt x 142.27406pt.
+<base.png, id=273, 204.01219pt x 163.3603pt>
+File: base.png Graphic file (type png)
+<use base.png>
+Package pdftex.def Info: base.png  used on input line 503.
+(pdftex.def)             Requested size: 142.26901pt x 142.26189pt.
+<bodMotor.png, id=274, 216.05719pt x 167.87718pt>
+File: bodMotor.png Graphic file (type png)
+<use bodMotor.png>
+Package pdftex.def Info: bodMotor.png  used on input line 509.
+(pdftex.def)             Requested size: 142.2685pt x 142.26337pt.
+ [10 <./powerBank.png> <./powerCircuit.png> <./buckConverter.png>]
+<s90.jpg, id=287, 1426.32875pt x 1179.40625pt>
 File: s90.jpg Graphic file (type jpg)
 <use s90.jpg>
-Package pdftex.def Info: s90.jpg  used on input line 512.
+Package pdftex.def Info: s90.jpg  used on input line 537.
 (pdftex.def)             Requested size: 128.0387pt x 105.87204pt.
-<wheel.png, id=292, 201.75375pt x 153.57375pt>
+<wheel.png, id=288, 201.75375pt x 153.57375pt>
 File: wheel.png Graphic file (type png)
 <use wheel.png>
-Package pdftex.def Info: wheel.png  used on input line 518.
+Package pdftex.def Info: wheel.png  used on input line 543.
 (pdftex.def)             Requested size: 128.0387pt x 97.46199pt.
-<espHolder.png, id=293, 231.86626pt x 139.27031pt>
+<espHolder.png, id=289, 231.86626pt x 139.27031pt>
 File: espHolder.png Graphic file (type png)
 <use espHolder.png>
-Package pdftex.def Info: espHolder.png  used on input line 524.
+Package pdftex.def Info: espHolder.png  used on input line 549.
 (pdftex.def)             Requested size: 128.0387pt x 76.90703pt.
-<usbPowerbank.png, id=303, 654.94687pt x 252.945pt>
+ [11 <./base.png> <./bodMotor.png> <./s90.jpg> <./wheel.png> <./espHolder.png>]
+<usbPowerbank.png, id=314, 654.94687pt x 252.945pt>
 File: usbPowerbank.png Graphic file (type png)
 <use usbPowerbank.png>
-Package pdftex.def Info: usbPowerbank.png  used on input line 574.
-(pdftex.def)             Requested size: 192.0548pt x 74.17041pt.
-<circuitDiagram.png, id=304, 652.839pt x 548.449pt>
+Package pdftex.def Info: usbPowerbank.png  used on input line 599.
+(pdftex.def)             Requested size: 142.25992pt x 142.26576pt.
+<circuitDiagram.png, id=315, 652.839pt x 548.449pt>
 File: circuitDiagram.png Graphic file (type png)
 <use circuitDiagram.png>
-Package pdftex.def Info: circuitDiagram.png  used on input line 580.
-(pdftex.def)             Requested size: 192.0548pt x 161.33914pt.
- [12 <./s90.jpg> <./wheel.png> <./espHolder.png>] [13 <./usbPowerbank.png> <./c
-ircuitDiagram.png>]
-[14
+Package pdftex.def Info: circuitDiagram.png  used on input line 605.
+(pdftex.def)             Requested size: 142.26028pt x 142.25862pt.
+ [12 <./usbPowerbank.png> <./circuitDiagram.png>] [13
 
 ]
-Overfull \hbox (5.57378pt too wide) in paragraph at lines 608--609
+Overfull \hbox (5.57378pt too wide) in paragraph at lines 634--635
 \OT1/cmr/m/n/12 lac-tic Acid) ma-te-rial, cho-sen for its strength, pre-ci-sion
 , and lightweight
  []
 
-<vehicle1.jpg, id=338, 1284.8pt x 722.7pt>
+<vehicle1.jpg, id=339, 1284.8pt x 722.7pt>
 File: vehicle1.jpg Graphic file (type jpg)
 <use vehicle1.jpg>
-Package pdftex.def Info: vehicle1.jpg  used on input line 618.
-(pdftex.def)             Requested size: 213.39568pt x 120.03433pt.
-[15 <./vehicle1.jpg>]
-<vehicle2.png, id=355, 348.55219pt x 344.03531pt>
+Package pdftex.def Info: vehicle1.jpg  used on input line 644.
+(pdftex.def)             Requested size: 256.07741pt x 144.0412pt.
+[14 <./vehicle1.jpg>]
+<wireManagement.jpg, id=356, 4641.34pt x 3481.005pt>
+File: wireManagement.jpg Graphic file (type jpg)
+<use wireManagement.jpg>
+Package pdftex.def Info: wireManagement.jpg  used on input line 683.
+(pdftex.def)             Requested size: 142.20868pt x 142.24408pt.
+<vehicle2.png, id=357, 348.55219pt x 344.03531pt>
 File: vehicle2.png Graphic file (type png)
 <use vehicle2.png>
-Package pdftex.def Info: vehicle2.png  used on input line 652.
-(pdftex.def)             Requested size: 213.39568pt x 210.63292pt.
- [16 <./vehicle2.png>] [17]
-<person.png, id=377, 494.44725pt x 525.76425pt>
+Package pdftex.def Info: vehicle2.png  used on input line 689.
+(pdftex.def)             Requested size: 142.26378pt x 142.26279pt.
+ [15 <./wireManagement.jpg> <./vehicle2.png>]
+<webUI.jpg, id=368, 406.51875pt x 688.82344pt>
+File: webUI.jpg Graphic file (type jpg)
+<use webUI.jpg>
+Package pdftex.def Info: webUI.jpg  used on input line 763.
+(pdftex.def)             Requested size: 142.25887pt x 142.26077pt.
+ [16]
+<ui.png, id=377, 613.54219pt x 655.69969pt>
+File: ui.png Graphic file (type png)
+<use ui.png>
+Package pdftex.def Info: ui.png  used on input line 783.
+(pdftex.def)             Requested size: 142.26324pt x 142.26335pt.
+
+[17 <./webUI.jpg> <./ui.png>]
+<person.png, id=390, 494.44725pt x 525.76425pt>
 File: person.png Graphic file (type png)
 <use person.png>
-Package pdftex.def Info: person.png  used on input line 742.
+Package pdftex.def Info: person.png  used on input line 813.
 (pdftex.def)             Requested size: 128.0387pt x 136.14995pt.
 
-Underfull \hbox (badness 4765) in paragraph at lines 743--743
-[]\OT1/cmr/m/n/12 Figure 15: []Detecting
+Underfull \hbox (badness 4765) in paragraph at lines 814--814
+[]\OT1/cmr/m/n/12 Figure 18: []Detecting
  []
 
-<bottle.png, id=378, 489.62926pt x 526.96875pt>
+<bottle.png, id=391, 489.62926pt x 526.96875pt>
 File: bottle.png Graphic file (type png)
 <use bottle.png>
-Package pdftex.def Info: bottle.png  used on input line 748.
+Package pdftex.def Info: bottle.png  used on input line 819.
 (pdftex.def)             Requested size: 128.0387pt x 137.79665pt.
 
-Underfull \hbox (badness 4765) in paragraph at lines 749--749
-[]\OT1/cmr/m/n/12 Figure 16: []Detecting
+Underfull \hbox (badness 4765) in paragraph at lines 820--820
+[]\OT1/cmr/m/n/12 Figure 19: []Detecting
  []
 
-<phone.png, id=379, 492.6405pt x 526.96875pt>
+<phone.png, id=392, 492.6405pt x 526.96875pt>
 File: phone.png Graphic file (type png)
 <use phone.png>
-Package pdftex.def Info: phone.png  used on input line 754.
+Package pdftex.def Info: phone.png  used on input line 825.
 (pdftex.def)             Requested size: 128.0387pt x 136.96039pt.
 [18 <./person.png> <./bottle.png> <./phone.png>] [19] [20
 
 ]
-<wheelTest1.png, id=412, 636.12656pt x 295.1025pt>
+<wheelTest1.png, id=424, 636.12656pt x 295.1025pt>
 File: wheelTest1.png Graphic file (type png)
 <use wheelTest1.png>
-Package pdftex.def Info: wheelTest1.png  used on input line 850.
+Package pdftex.def Info: wheelTest1.png  used on input line 923.
 (pdftex.def)             Requested size: 192.0548pt x 89.09428pt.
-<wheelTest2.png, id=413, 637.63219pt x 244.66406pt>
+<wheelTest2.png, id=425, 637.63219pt x 244.66406pt>
 File: wheelTest2.png Graphic file (type png)
 <use wheelTest2.png>
-Package pdftex.def Info: wheelTest2.png  used on input line 856.
+Package pdftex.def Info: wheelTest2.png  used on input line 929.
 (pdftex.def)             Requested size: 192.0548pt x 73.69096pt.
-<servoMotorTest1.png, id=414, 623.32875pt x 248.42813pt>
+<servoMotorTest1.png, id=426, 623.32875pt x 248.42813pt>
 File: servoMotorTest1.png Graphic file (type png)
 <use servoMotorTest1.png>
-Package pdftex.def Info: servoMotorTest1.png  used on input line 868.
+Package pdftex.def Info: servoMotorTest1.png  used on input line 941.
 (pdftex.def)             Requested size: 192.0548pt x 76.54187pt.
-<servoMotorTest2.png, id=415, 633.86812pt x 294.34969pt>
+<servoMotorTest2.png, id=427, 633.86812pt x 294.34969pt>
 File: servoMotorTest2.png Graphic file (type png)
 <use servoMotorTest2.png>
-Package pdftex.def Info: servoMotorTest2.png  used on input line 874.
+Package pdftex.def Info: servoMotorTest2.png  used on input line 947.
 (pdftex.def)             Requested size: 192.0548pt x 89.1814pt.
  [21 <./wheelTest1.png> <./wheelTest2.png>]
-<flashlightTest1.png, id=426, 625.58719pt x 243.91125pt>
+<flashlightTest1.png, id=438, 625.58719pt x 243.91125pt>
 File: flashlightTest1.png Graphic file (type png)
 <use flashlightTest1.png>
-Package pdftex.def Info: flashlightTest1.png  used on input line 886.
+Package pdftex.def Info: flashlightTest1.png  used on input line 959.
 (pdftex.def)             Requested size: 192.0548pt x 74.87851pt.
-<flashlightTest2.png, id=427, 626.34pt x 250.68657pt>
+<flashlightTest2.png, id=439, 626.34pt x 250.68657pt>
 File: flashlightTest2.png Graphic file (type png)
 <use flashlightTest2.png>
-Package pdftex.def Info: flashlightTest2.png  used on input line 892.
+Package pdftex.def Info: flashlightTest2.png  used on input line 965.
 (pdftex.def)             Requested size: 192.0548pt x 76.86667pt.
  [22 <./servoMotorTest1.png> <./servoMotorTest2.png> <./flashlightTest1.png> <.
 /flashlightTest2.png>]
-Overfull \hbox (5.14717pt too wide) in paragraph at lines 975--976
+Overfull \hbox (5.14717pt too wide) in paragraph at lines 1048--1049
 []\OT1/cmr/m/n/12 Continuous op-er-a-tion, in-clud-ing video stream-ing and mo-
 tor ac-tiv-ity, lasted
  []
 
-[23] [24] [25
+[23]
+Overfull \hbox (1.51263pt too wide) in paragraph at lines 1093--1094
+[]\OT1/cmr/bx/n/12 GitHub Repos-i-tory: []\OT1/cmtt/m/n/12 github.com/mallickbo
+y/AI-Powered-Surveillance
+ []
+
+[24] [25
 
 ] [26] [27
 
 ]
-Overfull \hbox (2.03198pt too wide) in paragraph at lines 1077--1078
+Overfull \hbox (2.03198pt too wide) in paragraph at lines 1166--1167
 \OT1/cmr/m/n/12 AI-Powered Surveil-lance Ve-hi-cle project suc-cess-fully in-te
 -grates wire-less video stream-
  []
@@ -1245,25 +1261,26 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `scratch.out' has not changed.
-(rerunfilecheck)             Checksum: 568679FFBEF2106F277DFD822C9735C7;4070.
+(rerunfilecheck)             Checksum: 09CB02F881EB5F8476CC824D050C97F4;4349.
  ) 
 Here is how much of TeX's memory you used:
- 25540 strings out of 474486
- 482875 string characters out of 5757355
+ 25589 strings out of 474486
+ 483687 string characters out of 5757355
  1935542 words of memory out of 5000000
- 47231 multiletter control sequences out of 15000+600000
- 568358 words of font info for 70 fonts, out of 8000000 for 9000
+ 47275 multiletter control sequences out of 15000+600000
+ 568527 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,93p,800b,666s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,9n,93p,800b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tamal\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><D:/LateX/Miktex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/LateX/Mi
 ktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/LateX/Miktex/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb><D:/LateX/Miktex/fonts/type1/public/amsfonts/cm/cmr17
 .pfb><D:/LateX/Miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/LateX/Mikte
-x/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on scratch.pdf (37 pages, 2925604 bytes).
+x/fonts/type1/public/amsfonts/cm/cmti12.pfb><D:/LateX/Miktex/fonts/type1/public
+/amsfonts/cm/cmtt12.pfb>
+Output written on scratch.pdf (37 pages, 6396741 bytes).
 PDF statistics:
- 580 PDF objects out of 1000 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 603 PDF objects out of 1000 (max. 8388607)
+ 177 named destinations out of 1000 (max. 500000)
+ 348 words of extra memory for PDF output out of 10000 (max. 10000000)
 

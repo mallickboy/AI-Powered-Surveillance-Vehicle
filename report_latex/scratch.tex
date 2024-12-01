@@ -40,11 +40,11 @@ Real-Time Object Detection with ESP32-CAM}
 %	\end{center}
     \large \textit{By}\\
 \vspace{\mySpace}
-    {\Large TAMAL MALLIK ( CSE21099 / 759 ) \\
+    {\Large AVISHEK MONDAL ( CSE21019 / 679 )  \\
     \vspace{0.1cm}
-    AVISHEK MONDAL ( CSE21019 / 679 ) \\
+    SOUVIK BAIDYA ( CSE21088  / 748 )\\
     \vspace{0.1cm}
-    SOUVIK BAIDYA ( CSE21088  / 748 ) \\
+    TAMAL MALLICK ( CSE21099 / 759 ) \\
     \fontsize{18}{22}\selectfont \fontfamily{ptm}\selectfont
 \vspace{\mySpace}}
     \begin{center}
@@ -166,12 +166,15 @@ $
 
 
 \cleardoublepage
-	\chapter*{\centering Abstract }
+\chapter*{\centering Abstract}
 \label{Abstract}
-This project presents the development of a wireless surveillance vehicle equipped with an integrated \textbf{ESP32-CAM camera}, designed for \textbf{real-time monitoring} and \textbf{security applications} \cite{esp32cam}. The vehicle uses the \textbf{ESP32-CAM development board} for live video streaming, enabling \textbf{remote surveillance} with high accessibility. Movement control is achieved using the \textbf{L298N motor driver}, offering \textbf{precise navigation} capabilities. The system further incorporates \textbf{YOLO-based real-time object detection}, enabling the automatic identification and tracking of objects within the vehicle's environment \cite{yolov10}. \\
+This project, entitled \textbf{"\mytitle"}, presents the development of a wireless surveillance vehicle equipped with an integrated \textbf{ESP32-CAM camera}, designed for \textbf{real-time monitoring} and \textbf{security applications} \cite{esp32cam}. By utilizing the \textbf{ESP32-CAM development board} for live video streaming, the vehicle facilitates \textbf{remote surveillance}, allowing users to monitor environments with high accessibility and from a distance.
 
-A user-friendly \textbf{mobile and desktop application} has been developed for \textbf{remote control}, enhancing the flexibility of operation. The project demonstrates a \textbf{compact and cost-effective solution} for surveillance, suitable for \textbf{security, military, and industrial monitoring} applications. In its current form, the vehicle provides \textbf{real-time video streaming} and \textbf{object detection}, while \textbf{future work} aims to integrate \textbf{AI-driven autonomous navigation} and \textbf{advanced object recognition} for improved decision-making and automated operation \cite{homl}.
+Movement control is achieved through the use of the \textbf{L298N motor driver}, ensuring \textbf{precise navigation} for efficient movement across various terrains. The system further integrates \textbf{YOLO-based real-time object detection}, enabling automatic identification and tracking of objects within the vehicleâ€™s environment \cite{yolov10}.
 
+In addition to hardware functionality, a \textbf{mobile and desktop application} has been developed, providing \textbf{remote control} and enhancing operational flexibility. This project offers a \textbf{compact and cost-effective solution}, ideal for \textbf{security, military, and industrial monitoring} applications.
+
+At present, the vehicle supports \textbf{real-time video streaming} and \textbf{object detection}, with future enhancements focusing on \textbf{AI-driven autonomous navigation} and \textbf{advanced object recognition} to improve decision-making and enable fully automated operations \cite{homl}.
 
 
 
@@ -203,6 +206,7 @@ Gzip & GNU zip (Compression Algorithm) \\ \hline
 API & Application Programming Interface \\ \hline
 ML & Machine Learning \\ \hline
 AI & Artificial Intelligence \\ \hline
+UI & User Interface \\ \hline
 CNN & Convolutional Neural Network \\ \hline
 LiDAR & Light Detection and Ranging \\ \hline
 4G/5G & Fourth/Fifth Generation Wireless Technology \\ \hline
@@ -382,12 +386,17 @@ This workflow ensures a cohesive interaction between hardware components, softwa
             \item Power: Operates at 5V with low power consumption.
         \end{itemize}
         \item \textbf{Role in System:} Captures video, processes user commands, and transmits data to and from the remote device. \\ 
+        
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{espCam}
-    \caption{ESP -CAM Development Board}
-    \label{fig:espCam}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=5cm, height=5cm]{espCam}
+        \caption{ESP -CAM Development Board}
+        \label{fig:espCam}
+    \end{minipage}
 \end{figure}
+
  
     \end{itemize}
 
@@ -408,13 +417,38 @@ This workflow ensures a cohesive interaction between hardware components, softwa
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{l298n}
-    \caption{L298N Motor Driver}
-    \label{fig:l298n}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=5cm, height=5cm]{l298n}
+        \caption{L298N Motor Driver}
+        \label{fig:l298n}
+    \end{minipage}
 \end{figure}
+
 
     
     \end{itemize}
+    
+    
+    \item \textbf{Power Supply:}
+    \begin{itemize}
+        \item \textbf{Battery:} A 10,000mAh Li-ion rechargeable battery with a 12V output powers the system.
+        \item \textbf{Role in System:} Provides the energy needed to run motors, ESP32-CAM, and auxiliary components, ensuring a runtime of approximately 2 hours under continuous operation.
+        
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=5cm, height=5cm]{powerBank}
+        \caption{Power Bank}
+        \label{fig:powerBank}
+    \end{minipage}
+\end{figure}
+      
+        
+    \end{itemize}    
+    
+    
 
     \item \textbf{Boost and Buck Converter:}
     \begin{itemize}
@@ -431,17 +465,21 @@ This workflow ensures a cohesive interaction between hardware components, softwa
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{powerCircuit}  % Boost Converter Image
+        \includegraphics[width=5cm, height=5cm]{powerCircuit}  % Boost Converter Image
         \caption{Boost Converter Circuit}
         \label{fig:powerCircuit}
     \end{minipage} \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{buckConverter}  % Buck Converter Image
+        \includegraphics[width=5cm, height=5cm]{buckConverter}  % Buck Converter Image
         \caption{Buck Converter Circuit}
         \label{fig:buckConverter}
     \end{minipage}
-\end{figure}        
+\end{figure}
+
+
+
+      
         
     \end{itemize}
 
@@ -462,36 +500,23 @@ This workflow ensures a cohesive interaction between hardware components, softwa
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{base}  % First Image (Base)
+        \includegraphics[width=5cm, height=5cm]{base}  % First Image (Base)
         \caption{Chassis}
         \label{fig:base}
     \end{minipage} \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{bodMotor}  % Second Image (BOD Motor)
+        \includegraphics[width=5cm, height=5cm]{bodMotor}  % Second Image (BOD Motor)
         \caption{High Torque BOD Motor}
         \label{fig:bodMotor}
     \end{minipage}
 \end{figure}
+
         
         
     \end{itemize}
 
 
-
-    \item \textbf{Power Supply:}
-    \begin{itemize}
-        \item \textbf{Battery:} A 10,000mAh Li-ion rechargeable battery with a 12V output powers the system.
-        \item \textbf{Role in System:} Provides the energy needed to run motors, ESP32-CAM, and auxiliary components, ensuring a runtime of approximately 2 hours under continuous operation.
-        
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\textwidth]{powerBank}
-    \caption{Power Bank}
-    \label{fig:powerBank}
-\end{figure}        
-        
-    \end{itemize}
 
     \item \textbf{Additional Components:}
     \begin{itemize}
@@ -571,17 +596,18 @@ The circuit forms the backbone of the surveillance vehicle, integrating the ESP3
     \centering
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{usbPowerbank}  % First Image (Base)
+        \includegraphics[width=5cm, height=5cm]{usbPowerbank}  % First Image (Base)
         \caption{12 V Activator Circuit Diagram for Power Bank}
         \label{fig:base}
     \end{minipage} \hfill
     \begin{minipage}{0.45\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{circuitDiagram}  % Second Image (BOD Motor)
+        \includegraphics[width=5cm, height=5cm]{circuitDiagram}  % Second Image (BOD Motor)
         \caption{Vehicle Circuit Diagram}
         \label{fig:circuitDiagram}
     \end{minipage}
-\end{figure}    
+\end{figure}
+  
     
 \end{enumerate}
 
@@ -615,10 +641,11 @@ The circuit forms the backbone of the surveillance vehicle, integrating the ESP3
         
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{vehicle1}
+    \includegraphics[width=0.6\textwidth]{vehicle1}
     \caption{Assembly of the Surveillance Vehicle}
     \label{fig:vehicle1}
-\end{figure}        
+\end{figure}
+     
         
         
     \end{itemize}
@@ -632,7 +659,9 @@ A critical step in hardware assembly is establishing the electrical connections 
 \begin{itemize}
     \item \textbf{Power Connections:}
     \begin{itemize}
-        \item A boost converter steps up the voltage to 12V to power the motors \cite{circuitdesign}.
+\item A boost converter steps up the voltage to 12V for the motors \cite{circuitdesign}.
+
+
         \item A buck converter regulates the voltage to 5V for the ESP32-CAM module \cite{circuitdesign}.
     \end{itemize}
     
@@ -649,10 +678,24 @@ A critical step in hardware assembly is establishing the electrical connections 
     
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{vehicle2}
-    \caption{Wiring of the Surveillance Vehicle}
-    \label{fig:vehicle2}
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=5cm, height=5cm]{wireManagement}
+        \caption{Surveillance vehicle wiring setup.}
+        \label{fig:wireManagement}
+    \end{minipage} \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=5cm, height=5cm]{vehicle2}
+        \caption{Surveillance vehicle after wiring completion.}
+        \label{fig:vehicle2}
+    \end{minipage}
 \end{figure}
+
+
+
+
+
 
 
 \end{itemize}
@@ -706,21 +749,49 @@ The software development phase focused on configuring the ESP32-CAM module for r
 \end{itemize}
 
     
-\item \textbf{Remote Control and Interface Design:}
-\begin{itemize}
-    \item A desktop user interface (UI) was developed using PyQt5 to access the video stream and control the remote vehicle over Wi-Fi via API endpoints.
-    \item The UI allows users to control the vehicle's movement, including:
-    \begin{itemize}
-        \item Forward, backward, and combinations of wheel movements.
-        \item Servo movements for camera adjustments.
-    \end{itemize}
-    \item The interface also enables:
-    \begin{itemize}
-        \item Viewing the live video feed and predictions from the machine learning model.
-        \item Controlling the flashlight's intensity.
-    \end{itemize}
-    \item To enhance usability, multi-threading and keyboard shortcuts were implemented for seamless monitoring and control of the vehicle.
+\item \textbf{Remote Control and User Interface Design:}  
+\begin{itemize}  
+    \item \textbf{Web Application (Phase 1):}  
+    \begin{itemize}  
+        \item A web application was developed to control the vehicle's movements and access the video stream. The application allowed users to control the vehicle remotely from various devices, including mobile phones, laptops, and desktops.  
+        \item Real-time vehicle control functionality and seamless video streaming were provided, ensuring smooth user interaction and monitoring.  
+        
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=5cm, height=5cm]{webUI}  % Web User Interface Image
+        \caption{Web User Interface}
+        \label{fig:webUI}
+    \end{minipage} \hfill
+\end{figure}
+        
+        
+    \end{itemize}  
+    \item \textbf{Desktop Application (Phase 2):}  
+    \begin{itemize}  
+        \item A PyQt5-based desktop user interface (UI) was created to access the video stream and control the remote vehicle over Wi-Fi via API endpoints.  
+        \item The UI provides features such as controlling vehicle movements (forward, backward, and combined wheel movements) and adjusting the camera's servo for precise positioning.  
+        \item Additional features include viewing live video feeds and predictions generated by the machine learning model, as well as controlling the flashlight's intensity.  
+        \item Multi-threading and keyboard shortcuts were integrated to ensure seamless monitoring and efficient control of the vehicle.  
+        
+        
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=5cm, height=5cm]{ui}  % Desktop User Interface Image
+        \caption{Desktop User Interface}
+        \label{fig:ui}
+    \end{minipage}
+\end{figure}
+        
+        
+    \end{itemize}  
+    
+    
 \end{itemize}
+
 
 
 \end{enumerate}
@@ -756,6 +827,8 @@ The software development phase focused on configuring the ESP32-CAM module for r
         \label{fig:phone}
     \end{minipage}
 \end{figure}  
+
+
 \end{enumerate}
 
 
@@ -1012,6 +1085,22 @@ The test results demonstrated the reliability and efficiency of the spy vehicleâ
 
 
 
+
+\label{Project Resources and Demonstration Links}
+\subsection{Project Resources and Demonstration Links}  
+For additional information about the project, including the ESP32 firmware and AI-powered desktop application software, you can visit the GitHub repository linked below. To understand the practical usage and outcomes of the project, the following demonstration videos are provided:  
+\begin{itemize}  
+    \item \textbf{GitHub Repository:} \href{https://github.com/mallickboy/AI-Powered-Surveillance-Vehicle} {\texttt{github.com/mallickboy/AI-Powered-Surveillance -Vehicle} } 
+    \item \textbf{Demonstration Videos:}  
+    \begin{itemize}  
+        \item \href{https://youtube.com/shorts/mN49lQP9cSI}{Vehicle Testing: \texttt{https://youtube.com/shorts/mN49lQP9cSI}}  
+        \item \href{https://youtu.be/T7p0-L5nbjI}{AI capabilities and UI Testing: \texttt{https://youtu.be/T7p0-L5nbjI}}  
+        \item \href{https://www.youtube.com/shorts/IsJDYwo2vSI}{Integration Testing: \texttt{https://www.youtube.com/shorts/IsJDYwo2vSI}}  
+    \end{itemize}  
+\end{itemize}
+
+
+ 
 
 
 

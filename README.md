@@ -1,4 +1,4 @@
-# AI-Powered Surveillance Vehicle
+<h1 align="center">AI-Powered Surveillance Vehicle </h1>
 
 ## Overview
 This project is an AI-powered surveillance vehicle equipped with a 360° movable camera, enabling real-time control and object detection. The system leverages ESP32-CAM for movement and streaming, YOLO for object detection, and a PyQt-based desktop application for control and monitoring. The vehicle is controlled through custom API routes to manage motors, servos, lights, and stream the camera feed. 
@@ -99,7 +99,8 @@ This project is an AI-powered surveillance vehicle equipped with a 360° movable
 - Voice-based control interface.
 
 ## Contributors
-- Tamal Mallick  (Firmware coding, Software coding, Machine Learning Integration, Wiring, Project Planning, Report & PPT making, Background Research, Others)
-- Avishek Mondal (3D Printing, Circuit Design, Hardware Assembly, Wiring, Project Planning, PPT making, Background Research, Others)
-- Souvik Baidya (Project Planning, Report & PPT making, Background Research, Others)
+- **Tamal Mallick** : *Firmware coding, Software coding, Machine Learning Integration, Wiring, Project Planning, Report & PPT making, Background Research, Others*
+- **Avishek Mondal** : *3D Printing, Circuit Design, Hardware Assembly, Wiring, Project Planning, PPT making, Background Research, Others*
+- **Souvik Baidya** : *Project Planning, Co-ordination, Report & PPT making, Background Research, Others*
+
 
